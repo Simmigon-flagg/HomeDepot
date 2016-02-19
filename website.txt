@@ -1,0 +1,7 @@
+FTP Host name
+ftp://waws-prod-blu-037.ftp.azurewebsites.windows.net
+
+FTP/DEPLOYMENT USER
+home-depot-code-athlonGSU\Simmigon
+
+Cabbage92
