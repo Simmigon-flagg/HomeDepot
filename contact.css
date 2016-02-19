@@ -1,0 +1,13 @@
+p [ng-model^=name] {
+    border-color: #d6e9c6;
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+h1 {
+	text-align: center;
+}
+
+body {
+	background-color: blue;
+}
