@@ -83,7 +83,7 @@ Layout your project
 </h1>
 
 <input type="text" class="form-control" id="name" placeholder="Name">
-<input type="text" class="form-control" id="perferedCompany" placeholder="Perfered Company">
+<input type="text" class="form-control" id="preferedCompany" placeholder="Prefered Company">
 <input type="text" class="form-control" id="budget" placeholder="Budget">
 <input type="text" class="form-control" id="zip" placeholder="Zip">
 <input type="text" class="form-control" id="job" placeholder="Job">
