@@ -6,17 +6,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="index.css">
   <script type="text/javascript" src="index.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -25,112 +24,184 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" href="#myPage">About</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#about">Input</a></li>
+        <li><a href="#filter">Filter</a></li>
+        <li><a href="#contact">Match</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <div class="jumbotron text-center">
-  <h1>Code Hammer</h1> 
+  <h1>Code Hammer <br> You Can Do It We Can Help</h1> 
 </div>
+
+<div id="about" class="container-fluid">
+
+<?php
+
+
+$servername = "us-cdbr-azure-east-a.cloudapp.net";
+$username = "bdf7fc6b334bd9";
+$password = "57c924c2";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+mysqli_select_db($conn,"code_hammer");
+
+$sql = "INSERT INTO diy (idDIY , DIYName, Budget, zip, jobType)
+VALUES ('5', 'nathan','100', '30096', 'garden');";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+
+
+$conn->close();
+?>
 
 <!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <h2>About Company Page</h2><br>
-      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
-    </div>
-  </div>
-</div>
 
-<!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
-  <h2>SERVICES</h2>
-  <h4>What we offer</h4>
-  <br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-off logo-small"></span>
-      <h4>POWER</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      
-      <h4>LOVE</h4>
-      <p><script> function initMap() {
-  // Create a map object and specify the DOM element for display.
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    scrollwheel: false,
-    zoom: 8
-  });
-}</script></p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-lock logo-small"></span>
-      <h4>JOB DONE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-  </div>
-  <br><br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-leaf logo-small"></span>
-      <h4>GREEN</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-certificate logo-small"></span>
-      <h4>CERTIFIED</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-wrench logo-small"></span>
-      <h4 style="color:#303030;">HARD WORK</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-  </div>
-</div>
+CUST_ID,COMPANY NAME,2015 PRO XTRA SPEND,TRADE,ZIP
+<br>
 
+</h1>
+Layout your project 
+</h1>
+
+<input type="text" class="form-control" id="name" placeholder="Name">
+<input type="text" class="form-control" id="perferedCompany" placeholder="Perfered Company">
+<input type="text" class="form-control" id="budget" placeholder="Budget">
+<input type="text" class="form-control" id="zip" placeholder="Zip">
+<input type="text" class="form-control" id="job" placeholder="Job">
+<button class="btn btn-default" type="submit" onclick="getInput()"> Submit </button>
+</div>
+<hr>
+
+     <?php
+            $servername = "us-cdbr-azure-east-a.cloudapp.net";
+            $username = "bdf7fc6b334bd9";
+            $password = "57c924c2";
+            $conn = mysql_connect($servername, $username, $password);
+
+            $db =  mysql_select_db("code_hammer",$conn);
+            $query = mysql_query("select * from pros");
+
+       
+        ?>
+
+
+      <div id="filter">
+          <h2>Select Pro</h2> 
+        <table>
+            <tr>
+                <td>IdPros</td>
+                <td>Company Name</td>
+                <td>TRADE</td>
+                <td>ZIP</td>
+            </tr>
+        </div>
+
+            <?php
+               while ($row = mysql_fetch_array($query)) {
+                   echo "<tr>";
+                   echo "<td>".$row[idPros]."</td>";
+                   echo "<td>".$row[COMPANY_NAME]."</td>";
+                   echo "<td>".$row[TRADE]."</td>";
+                   echo "<td>".$row[ZIP]."</td>";
+                   echo "</tr>";
+               }
+            ?>
+
+<script type="text/javascript">
+$("#filter tr").click(function() {
+    var selected = $(this).hasClass("highlight");
+    $("#filter tr").removeClass("highlight");
+    if(!selected)
+            $(this).addClass("highlight");
+
+    var $row = jQuery(this).closest('tr');
+    var $columns = $row.find('td');
+
+    $columns.addClass('row-highlight');
+    var values = "";
+
+    jQuery.each($columns, function(i, item) {
+        values = values + 'td' + (i + 1) + ':' + item.innerHTML + '<br/>';
+        alert(values);
+    });
+    console.log(values);
+</script>
+       
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Company</th>
+        <th>Price</th>
+        <th>Trade</th>
+        <th>ZIP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Truzing Collective</td>
+        <td>$100,000</td>
+        <td>Electrician</td>
+        <td>22180</td>
+      </tr>
+    </tbody>
+  </table>
+>>>>>>> origin/master
+  </div>
+
+
+<hr>
 
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <div ng-app="" ng-init="name=''">
+<div class="bg-grey">
+<div id="leftFilter" class="sidePiece"> </div>
+<div id="rightFilter" class="sidePiece"> </div>
+<div id="contact" class="container-fluid">
+  <div ng-app="" ng-init="name='Nathan'">
   <!--  <p>Name : <input type="text" ng-model="name"></p> -->
   <h1>Contact {{name}}</h1>
-</div>
+  </div>
+
   <div class="row">
     <div class="col-sm-4">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> ZIP</p>
+      <button onclick = "findPro()"> </button>
       <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
       <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>	 
     </div>
     <div class="col-sm-8"> 
-      <p> Cust_ID </p>
-      <p> Cust_ID </p>
+      Company Name: <p id="CompanyName"> </p>
+      Spent: <p id="Spent"> </p>
+      Trade: <p id="Trade"> </p>
+      Zip: <span class="glyphicon glyphicon-map-marker"></span> <p id="Zip"> </p>
     </div>
   </div>
+    <button> Not who I was looking for </button>
+</div>
 </div>
 
 <footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>		
+  
 </footer>
 
 <script>

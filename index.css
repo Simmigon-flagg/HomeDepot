@@ -1,9 +1,9 @@
-
   body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
       color: #818181;
   }
+
   h2 {
       font-size: 24px;
       text-transform: uppercase;
@@ -11,6 +11,7 @@
       font-weight: 600;
       margin-bottom: 30px;
   }
+
   h4 {
       font-size: 19px;
       line-height: 1.375em;
@@ -18,26 +19,68 @@
       font-weight: 400;
       margin-bottom: 30px;
   }  
+
+  #services {
+    background: #f4511e;
+  }
+
   .jumbotron {
       background-color: #f4511e;
       color: #fff;
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
   }
+
   .container-fluid {
       padding: 60px 50px;
   }
+
+  #contact {
+    padding-left: 30%;
+  }
+
+  .highlight { background-color: #f4511e; }
+
+  #filter {
+    padding-left: 50px;
+  }
+
+  #filter td:hover {
+      background-color: #f4511e;
+  }
+
+  .sidePiece {
+    width: 100px;
+    height: 600px;
+    background: #f4511e;
+  }
+
+    #leftFilter {
+    float: left;
+  }
+
+    #rightFilter {
+    float: right;
+  }
+
   .bg-grey {
       background-color: #f6f6f6;
   }
+
+  .red-cell {
+   background: #F00; /* Or some other color */
+}
+
   .logo-small {
       color: #f4511e;
       font-size: 50px;
   }
+
   .logo {
       color: #f4511e;
       font-size: 200px;
   }
+
   .thumbnail {
       padding: 0 0 15px 0;
       border: none;
@@ -117,9 +160,11 @@
       border-radius: 0;
       font-family: Montserrat, sans-serif;
   }
+
   .navbar li a, .navbar .navbar-brand {
       color: #fff !important;
   }
+
   .navbar-nav li a:hover, .navbar-nav li.active a {
       color: #f4511e !important;
       background-color: #fff !important;
@@ -128,12 +173,14 @@
       border-color: transparent;
       color: #fff !important;
   }
+
   footer .glyphicon {
       font-size: 20px;
       margin-bottom: 20px;
       color: #f4511e;
   }
   .slideanim {visibility:hidden;}
+
   .slide {
       animation-name: slide;
       -webkit-animation-name: slide;	
@@ -141,6 +188,7 @@
       -webkit-animation-duration: 1s;
       visibility: visible;			
   }
+
   @keyframes slide {
     0% {
       opacity: 0;
@@ -151,6 +199,7 @@
       -webkit-transform: translateY(0%);
     }	
   }
+
   @-webkit-keyframes slide {
     0% {
       opacity: 0;
@@ -161,6 +210,7 @@
       -webkit-transform: translateY(0%);
     }
   }
+
   @media screen and (max-width: 768px) {
     .col-sm-4 {
       text-align: center;
@@ -171,6 +221,7 @@
         margin-bottom: 35px;
     }
   }
+
   @media screen and (max-width: 480px) {
     .logo {
         font-size: 150px;
