@@ -1,38 +1,45 @@
-var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+function DIY () {
+	name = "",
+	budget = "",
+	zip = "",
+	job = ""
+};
 
-function initialize() {
-var mapProp = {
-  center:myCenter,
-  zoom:12,
-  scrollwheel:false,
-  draggable:false,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-  position:myCenter,
-  });
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-
-var DIY () {
-
-}
-
-var pro {
-	cust_id = "",
+function pro () {
+	this.cust_id = "",
 	companyName = "",
-	spent = "",
+	price = "",
 	trade = "",
 	zip = ""
 };
 
-var DIY {
-	
+function getInput() {
+    var name = document.getElementById("name").value;
+    var budget = document.getElementById("budget").value;
+    var zip = document.getElementById("zip").value;
+    var job = document.getElementById("job").value;
+    var DIYperson = new DIY();
+    DIYperson.name = name;
+    DIYperson.budget = budget;
+    DIYperson.zip = zip;
+    DIYperson.job = job
+    console.log(DIYperson);
 }
+
+function contactPro (companyName, price, trade, zip) {
+  console.log('Creating Pro');
+  var matchedPro =  new pro(); 
+  matchedPro.companyName = companyName;
+  matchedPro.price = price;
+  matchedPro.trade = trade;
+  matchedPro.zip = zip;
+  document.getElementById("CompanyName").innerHTML = matchedPro.companyName;
+  document.getElementById("Spent").innerHTML = matchedPro.price;
+  document.getElementById("Trade").innerHTML = matchedPro.trade;
+  document.getElementById("Zip").innerHTML = matchedPro.zip;
+}
+
+
+
+
 
