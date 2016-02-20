@@ -38,6 +38,7 @@
 
 <div class="jumbotron text-center">
   <h1>Code Hammer <br> You Can Do It We Can Help</h1> 
+  
 </div>
 
 <div id="about" class="container-fluid">
