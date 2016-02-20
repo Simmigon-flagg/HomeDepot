@@ -22,7 +22,20 @@ $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-echo "Connected successfully";
+
+$sql = "SELECT COMPANY_NAME, TRADE FROM code_hammer.pros;";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "Company Name: " . $row["COMPANY_NAME"]. " - Trade: " . $row["TRADE"]. " " . $row["lastname"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
+
 ?>
 
 <div ng-app="" ng-init="name='nathan'">
@@ -45,6 +58,20 @@ echo "Connected successfully";
 	</div>
 
 </div>
+
+<div class="container">
+  <h2>Basic List Group</h2>
+  <ul class="list-group">
+    <li class="list-group-item">First item</li>
+    <li class="list-group-item">Second item</li>
+    <li class="list-group-item">Third item</li>
+  </ul>
+</div>
+
+<?php
+
+
+?>
 
 </body>
 
