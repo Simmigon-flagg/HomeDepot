@@ -1,7 +1,14 @@
-p [ng-model^=name] {
-    border-color: #d6e9c6;
-    background-color: #dff0d8;
-    color: #3c763d;
+#container {
+	border-style: solid;
+	margin: 50px 50px 50px 50px ;
+}
+
+
+.section {
+	border-style: dashed;
+	margin: 5px 5px 5px 5px;
+	height: 100px;
+
 }
 
 h1 {
@@ -9,5 +16,5 @@ h1 {
 }
 
 body {
-	background-color: blue;
+	background-color: #cce6ff;
 }
